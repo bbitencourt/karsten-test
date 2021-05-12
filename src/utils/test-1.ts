@@ -1,7 +1,7 @@
 export const removeObjectProperty = (
   object: Record<string, any>,
   property: string
-): boolean => {
+): Record<string, any> | boolean => {
   if (!object) return false;
   if (!property) return false;
 
@@ -11,7 +11,6 @@ export const removeObjectProperty = (
   if (!hasProperty) return false;
 
   delete object[property];
-  console.log(object);
 
-  return true;
+  return object;
 };

@@ -20,8 +20,7 @@ export const processAfterWait = async () => {
   const diff = differenceInMilliseconds(endProcess, startProcess);
   localStorage.setItem("processTime", diff.toString());
 
-  const processTime = localStorage.getItem("processTime");
-  console.log(processTime);
+  localStorage.getItem("processTime");
 
-  return processTime;
+  return diff.toString();
 };
